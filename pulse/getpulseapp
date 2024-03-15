@@ -1,0 +1,25 @@
+from flask import Flask
+
+from lib.device import Camera
+from lib.processors_noopenmdao import findFaceGetPulse
+from cv2 import moveWindow
+
+app = Flask(__name__)
+
+class getPulseApp:
+    def __init__(self, args):
+        # Include the initialization code from your existing class here
+
+    # Include the methods from your existing class here
+
+# Instantiate the getPulseApp class
+pulse_app = getPulseApp(args=None)
+
+@app.route('/')
+def process_webcam_feed():
+    # Call methods from getPulseApp to process webcam feed and generate output
+    pulse_app.main_loop()
+    return "Output generated successfully"
+
+if __name__ == '__main__':
+    app.run(debug=True)
