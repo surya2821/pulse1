@@ -9,7 +9,7 @@ class PulseApp:
         self.processor = findFaceGetPulse(bpm_limits=[70, 160],
                                           data_spike_limit=2500.,
                                           face_detector_smoothness=10.)
-        self.bpm_plot = True
+        self.bpm_plot = Flase 
         self.running = True
 
     def main(self):
